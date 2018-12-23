@@ -1,6 +1,7 @@
 class Stack {
     private _count: number;
     private _storage: any;
+    
     constructor(){
         this._count=0;
         this._storage = {};
@@ -25,7 +26,7 @@ class Stack {
     /**
      * pop
      */
-    public pop() {
+    public pop=()=> {
         if (this._count === 0) {
             return undefined;
         }
@@ -58,3 +59,13 @@ myStack.push("Oyedayo")
 console.log("######", myStack.peek())
 console.log(myStack.size)
 console.log(myStack)
+
+let myList : number[] = [3,5,6,8,2,56,7,8];
+
+let sum = (arr: number[]) =>{
+  return arr.reduce((a,b)=> a + b, 0)
+}
+
+console.log(sum(myList));
+
+

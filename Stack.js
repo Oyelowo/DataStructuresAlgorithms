@@ -1,6 +1,19 @@
 "use strict";
 var Stack = /** @class */ (function () {
     function Stack() {
+        var _this = this;
+        /**
+         * pop
+         */
+        this.pop = function () {
+            if (_this._count === 0) {
+                return undefined;
+            }
+            _this._count--;
+            var result = _this._storage[_this._count];
+            delete _this._storage[_this._count];
+            return result;
+        };
         this._count = 0;
         this._storage = {};
     }
@@ -22,18 +35,6 @@ var Stack = /** @class */ (function () {
         this._count++;
     };
     /**
-     * pop
-     */
-    Stack.prototype.pop = function () {
-        if (this._count === 0) {
-            return undefined;
-        }
-        this._count--;
-        var result = this._storage[this._count];
-        delete this._storage[this._count];
-        return result;
-    };
-    /**
      * peek
      */
     Stack.prototype.peek = function () {
@@ -53,3 +54,8 @@ myStack.push("Oyedayo");
 console.log("######", myStack.peek());
 console.log(myStack.size);
 console.log(myStack);
+var myList = [3, 5, 6, 8, 2, 56, 7, 8];
+var sum = function (arr) {
+    return arr.reduce(function (a, b) { return a + b; }, 0);
+};
+console.log(sum(myList));
