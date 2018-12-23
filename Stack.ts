@@ -1,7 +1,7 @@
 class Stack {
     private _count: number;
     private _storage: any;
-    
+
     constructor(){
         this._count=0;
         this._storage = {};
@@ -10,6 +10,7 @@ class Stack {
     public get size() : number {
         return this._count;
     }
+
     public set size(val: number) {
         this._count = val;
     }
@@ -46,26 +47,26 @@ class Stack {
 }
 
 
-let myStack = new Stack();
-myStack.push(4)
-console.log(myStack.size)
-myStack.push("Oyelowo")
-myStack.push("Oyelowo")
-myStack.push("Oyelowo")
-myStack.pop()
-myStack.size = 3000;
 
-myStack.push("Oyedayo")
-console.log("######", myStack.peek())
-console.log(myStack.size)
-console.log(myStack)
-
-let myList : number[] = [3,5,6,8,2,56,7,8];
-
-let sum = (arr: number[]) =>{
-  return arr.reduce((a,b)=> a + b, 0)
-}
-
-console.log(sum(myList));
+let ourStack = new Stack();
+let secondStack = new Stack();
 
 
+
+
+
+console.log(ourStack === secondStack)
+
+
+
+ourStack.push(5);
+console.log(ourStack);
+
+ourStack.push('lowo');
+
+ourStack.pop()
+console.log(ourStack);
+
+ourStack.size = 3000;
+console.log(ourStack.size)
+console.log("#######",ourStack.peek());
