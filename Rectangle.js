@@ -53,6 +53,8 @@ var Rectangle = /** @class */ (function () {
 exports.Rectangle = Rectangle;
 var r1 = new Rectangle(12, 7);
 var r2 = new Rectangle(42, 4);
+var r3 = new Rectangle(42, 4);
+console.log(r2.perimeter === r3.perimeter);
 console.log(r2.area);
 console.log(r2.areaIsDouble(r1));
 var kk = Rectangle.perimeterDiff(r2, r1);

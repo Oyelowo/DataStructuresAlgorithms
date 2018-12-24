@@ -17,6 +17,8 @@ class Rectangle {
     public areaIsDouble(rectangle: Rectangle ) : boolean{
         return this.area === 2 * rectangle.area;
     }
+
+    
     
     public get length() : number {
         return this._length;
@@ -46,7 +48,9 @@ class Rectangle {
 
 let r1 = new Rectangle(12, 7);
 let r2 = new Rectangle(42, 4);
+let r3 = new Rectangle(42, 4);
 
+console.log(r2.perimeter===r3.perimeter)
 console.log(r2.area)
 console.log(r2.areaIsDouble(r1));
 
