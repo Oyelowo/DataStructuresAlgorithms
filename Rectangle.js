@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Rectangle = /** @class */ (function () {
-    function Rectangle(length, width) {
-        this._length = length;
+    function Rectangle(_length, width) {
+        this._length = _length;
+        this._length = _length;
         this._width = width;
     }
     Rectangle.perimeterDiff = function (rec1, rec2) {

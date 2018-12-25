@@ -1,9 +1,8 @@
 class Rectangle {
-    private _length: number;
     private _width : number;
 
-    constructor(length: number,  width: number){
-        this._length = length;
+    public constructor(public _length: number,  width: number){
+        this._length = _length;
         this._width = width;
     }
 
@@ -17,8 +16,6 @@ class Rectangle {
     public areaIsDouble(rectangle: Rectangle ) : boolean{
         return this.area === 2 * rectangle.area;
     }
-
-    
     
     public get length() : number {
         return this._length;

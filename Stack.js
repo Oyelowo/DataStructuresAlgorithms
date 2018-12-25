@@ -2,9 +2,6 @@
 var Stack = /** @class */ (function () {
     function Stack() {
         var _this = this;
-        /**
-         * pop
-         */
         this.pop = function () {
             if (_this._count === 0) {
                 return undefined;
@@ -27,16 +24,17 @@ var Stack = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    /**
-     * name
-     */
+    Object.defineProperty(Stack.prototype, "array", {
+        get: function () {
+            return Object.values(this._storage);
+        },
+        enumerable: true,
+        configurable: true
+    });
     Stack.prototype.push = function (value) {
         this._storage[this._count] = value;
         this._count++;
     };
-    /**
-     * peek
-     */
     Stack.prototype.peek = function () {
         return this._storage[this._count - 1];
     };
@@ -48,6 +46,8 @@ console.log(ourStack === secondStack);
 ourStack.push(5);
 console.log(ourStack);
 ourStack.push('lowo');
+ourStack.push(2);
+console.log('rrrrrr', ourStack.array);
 ourStack.pop();
 console.log(ourStack);
 ourStack.size = 3000;

@@ -10,23 +10,20 @@ class Stack {
     public get size() : number {
         return this._count;
     }
+    
+    public get array() : any[] {
+        return Object.values(this._storage);
+    }
 
     public set size(val: number) {
         this._count = val;
     }
 
-    
-    /**
-     * name
-     */
     public push(value: any) :void{
         this._storage[this._count] = value;
         this._count++;
     }
 
-    /**
-     * pop
-     */
     public pop=()=> {
         if (this._count === 0) {
             return undefined;
@@ -38,9 +35,6 @@ class Stack {
         return result;
     }
 
-    /**
-     * peek
-     */
     public peek() {
         return this._storage[this._count - 1];
     }
@@ -63,6 +57,8 @@ ourStack.push(5);
 console.log(ourStack);
 
 ourStack.push('lowo');
+ourStack.push(2);
+console.log('rrrrrr',ourStack.array)
 
 ourStack.pop()
 console.log(ourStack);
